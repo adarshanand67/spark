@@ -1,5 +1,4 @@
 # Apache Spark
-## Future Learning Pathway
 
 ### Overview
 
