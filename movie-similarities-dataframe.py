@@ -5,6 +5,16 @@ import sys
 
 
 def computeCosineSimilarity(spark, data):
+    """
+    Compute the cosine similarity between movie pairs.
+
+    Args:
+        spark (SparkSession): The Spark session.
+        data (DataFrame): The input DataFrame containing movie ratings.
+
+    Returns:
+        DataFrame: A DataFrame containing movie pairs and their similarity scores.
+    """
     # Compute xx, xy and yy columns
     pairScores = (
         data.withColumn("xx", func.col("rating1") * func.col("rating1"))
@@ -33,8 +43,17 @@ def computeCosineSimilarity(spark, data):
     return result
 
 
-# Get movie name by given movie id
 def getMovieName(movieNames, movieId):
+    """
+    Get the movie name by given movie ID.
+
+    Args:
+        movieNames (DataFrame): The DataFrame containing movie names.
+        movieId (int): The movie ID.
+
+    Returns:
+        str: The movie name.
+    """
     result = (
         movieNames.filter(func.col("movieID") == movieId)
         .select("movieTitle")

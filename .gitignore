@@ -31,3 +31,9 @@ Thumbs.db
 
 # Data
 ml-*/
+
+# Python
+__pycache__/
+
+# Jupyter
+.ipynb_checkpoints/

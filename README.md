@@ -56,3 +56,11 @@ For more details, refer to the [Taming Big Data with Apache Spark](https://intel
 - **Big Data Ecosystem**: Learn about other tools in the big data ecosystem, such as Hadoop, Kafka, and Flink, and how they integrate with Spark.
 - **Cloud Computing**: Understand how to deploy Spark on cloud platforms like AWS, Azure, and Google Cloud, and leverage cloud services for big data processing.
 - **Real-world Projects**: Work on real-world projects using Spark to gain practical experience and apply your knowledge to solve business problems.
+
+### Code Formatting
+
+We use `black` for Python code formatting to ensure consistency across the codebase. To format the code, run the following command:
+
+```sh
+black .
+```
